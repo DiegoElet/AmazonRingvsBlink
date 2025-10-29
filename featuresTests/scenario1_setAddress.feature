@@ -3,6 +3,7 @@ Feature: Set US Address on Amazon
 
   Scenario: Setting US address
     Given I open the Amazon homepage
+    When I click on Continue shopping
     When I handle the "Visiting from Canada?" popup
     When I set the US address to "20212"
     Then I click on the main search bar to confirm

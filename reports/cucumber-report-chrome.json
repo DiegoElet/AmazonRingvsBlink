@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 475455899
+              "duration": 502356099
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 890672699
+              "duration": 615769299
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 6,
             "name": "I handle the \"Visiting from Canada?\" popup",
             "match": {
-              "location": "step_definitions\\scenario1_setAddress.steps.js:10"
+              "location": "step_definitions\\scenario1_setAddress.steps.js:14"
             },
             "result": {
               "status": "passed",
-              "duration": 293715600
+              "duration": 2095952099
             }
           },
           {
@@ -49,12 +49,12 @@
             "line": 7,
             "name": "I set the US address to \"20212\"",
             "match": {
-              "location": "step_definitions\\scenario1_setAddress.steps.js:14"
+              "location": "step_definitions\\scenario1_setAddress.steps.js:18"
             },
             "result": {
               "status": "failed",
-              "duration": 5018201300,
-              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Diego\\AmazonRingVsBlinkProject\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)"
+              "duration": 5005364000,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Diego\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)"
             }
           },
           {
@@ -63,7 +63,7 @@
             "line": 8,
             "name": "I click on the main search bar to confirm",
             "match": {
-              "location": "step_definitions\\scenario1_setAddress.steps.js:18"
+              "location": "step_definitions\\scenario1_setAddress.steps.js:22"
             },
             "result": {
               "status": "skipped",
@@ -75,7 +75,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 329603299
+              "duration": 455411799
             }
           }
         ],

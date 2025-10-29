@@ -7,6 +7,10 @@ Given('I open the Amazon homepage', async function () {
   await this.homePage.navigate();
 });
 
+When ('I click on Continue shopping', async function () {
+  await this.homePage.clickContinueShopping();
+});
+
 When('I handle the "Visiting from Canada?" popup', async function () {
   await this.homePage.handleAddressPopup();
 });

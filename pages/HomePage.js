@@ -6,6 +6,7 @@ class HomePage {
   constructor(page) {
     this.page = page;
     // Locators
+    this.continueShoppingButton = page.locator('button', { name: 'Continue shopping' });
     this.canadaPopup = page.locator('div[role="dialog"]:has-text("Visiting from Canada?")');
     this.stayOnAmazonButton = page.getByRole('button', { name: 'Stay on Amazon.com' });
     this.changeAddressButton = page.locator('#nav-global-location-popover-link');
@@ -20,6 +21,12 @@ class HomePage {
 
   async navigate() {
     await this.page.goto(amazonUrl);
+  }
+
+  async clickContinueShopping() {
+    const continueShoppingButton = this.page.getByRole('button', { name: 'Continue shopping' , timeout: 33000});
+    await expect(continueShoppingButton).toBeVisible();
+    await continueShoppingButton.click();
   }
 
   async handleAddressPopup() {
