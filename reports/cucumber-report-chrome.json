@@ -1,0 +1,596 @@
+[
+  {
+    "description": "  As a user, I want to complete the full shopping workflow on Amazon",
+    "elements": [
+      {
+        "description": "",
+        "id": "amazon-shopping-workflow;setting-us-address",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Setting US address",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 475455899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open the Amazon homepage",
+            "match": {
+              "location": "step_definitions\\scenario1_setAddress.steps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 890672699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I handle the \"Visiting from Canada?\" popup",
+            "match": {
+              "location": "step_definitions\\scenario1_setAddress.steps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 293715600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "I set the US address to \"20212\"",
+            "match": {
+              "location": "step_definitions\\scenario1_setAddress.steps.js:14"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 5018201300,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Diego\\AmazonRingVsBlinkProject\\node_modules\\@cucumber\\cucumber\\lib\\time.js:64:20)\n    at listOnTimeout (node:internal/timers:588:17)\n    at process.processTimers (node:internal/timers:523:7)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I click on the main search bar to confirm",
+            "match": {
+              "location": "step_definitions\\scenario1_setAddress.steps.js:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 329603299
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "amazon-shopping-workflow;adding-ring-doorbell-pro-2",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Adding Ring Doorbell Pro 2",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 11,
+            "name": "I am on the Amazon homepage with a US address",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:7"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "I search for \"Ring doorbell pro 2\"",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:15"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I click on the \"Video Doorbell Pro 2\" result",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:19"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I add the item to the cart",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:23"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I validate \"Added to cart\" is displayed",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:27"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "amazon-shopping-workflow;adding-ring-chime-pro",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "Adding Ring Chime Pro",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 18,
+            "name": "I am on the Amazon homepage",
+            "match": {
+              "location": "step_definitions\\scenario3_addRingChimes.steps.js:7"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 19,
+            "name": "I search for \"Ring chime Pro\"",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:15"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I click on the \"Ring Chime Pro\" result",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:19"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I select quantity \"2\"",
+            "match": {
+              "location": "step_definitions\\scenario3_addRingChimes.steps.js:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I add the item to the cart",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:23"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I validate \"Added to cart\" is displayed",
+            "match": {
+              "location": "step_definitions\\scenario2_addRingDoorbell.steps.js:27"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "amazon-shopping-workflow;checking-both-items-in-the-cart",
+        "keyword": "Scenario",
+        "line": 25,
+        "name": "Checking both items in the Cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 26,
+            "name": "I have items in my cart",
+            "match": {
+              "location": "step_definitions\\scenario4_checkCart.steps.js:6"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "I go to the cart",
+            "match": {
+              "location": "step_definitions\\scenario4_checkCart.steps.js:12"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see \"Shopping Cart\"",
+            "match": {
+              "location": "step_definitions\\scenario4_checkCart.steps.js:18"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I should see the \"Save for later\" button",
+            "match": {
+              "location": "step_definitions\\scenario4_checkCart.steps.js:24"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I should see the \"Subtotal\" text",
+            "match": {
+              "location": "step_definitions\\scenario4_checkCart.steps.js:29"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "amazon-shopping-workflow",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Amazon Shopping Workflow",
+    "tags": [],
+    "uri": "featuresTests\\shopping_workflow.feature"
+  },
+  {
+    "description": "  As a user, I want to compare Ring and Blink subscription plans",
+    "elements": [
+      {
+        "description": "",
+        "id": "ring-vs-blink-subscription-comparison;searching-ring-subscriptions-plans",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Searching Ring subscriptions plans",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I navigate to the \"Ring URL\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I find the \"Compare Plans\" text",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I find the \"Basic\" plan text",
+            "match": {
+              "location": "step_definitions\\scenario5_searchRingPlans.steps.js:7"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I get the \"Ring basic yearly price\" and save it",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "ring-vs-blink-subscription-comparison;searching-blink-subscriptions-plans",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Searching Blink subscriptions plans",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "I navigate to the \"Blink URL\"",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I find the \"Plan: Blink Basic\" text",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I find the \"Yearly\" text",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I get the \"Blink basic yearly price\" and save it",
+            "result": {
+              "status": "ambiguous",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "ring-vs-blink-subscription-comparison;comparing-ring-vs-blink-subscriptions-from-both-pages",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Comparing Ring vs Blink subscriptions from both pages",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I have saved the Ring and Blink yearly prices",
+            "match": {
+              "location": "step_definitions\\scenario7_compareSubscriptions.steps.js:6"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I print both prices to the console",
+            "match": {
+              "location": "step_definitions\\scenario7_compareSubscriptions.steps.js:12"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I compare the prices and print the result",
+            "match": {
+              "location": "step_definitions\\scenario7_compareSubscriptions.steps.js:17"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "ring-vs-blink-subscription-comparison",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Ring vs Blink Subscription Comparison",
+    "tags": [],
+    "uri": "featuresTests\\subscription_comparison.feature"
+  }
+]

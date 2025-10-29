@@ -1,0 +1,31 @@
+{
+  "name": "playwright-cucumber-amazon",
+  "version": "1.0.0",
+  "description": "Amazon test automation project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm-run-all --parallel test:firefox test:chrome && npm run test:report",
+    "test:firefox": "cross-env BROWSER=firefox HEADLESS=false cucumber-js",
+    "test:chrome": "cross-env BROWSER=chrome HEADLESS=false cucumber-js",
+    "test:headed": "cross-env HEADLESS=false BROWSER=firefox cucumber-js",
+    "test:report": "node generate-report.js",
+    "test:scenario1": "cross-env BROWSER=firefox HEADLESS=false cucumber-js featuresTests/scenario1_setAddress"
+  },
+  
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.45.1",
+    "cross-env": "^10.1.0",
+    "cucumber-html-reporter": "^6.0.0",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "npm-run-all": "^4.1.5",
+    "playwright": "^1.45.1"
+  }
+}
