@@ -1,7 +1,7 @@
 // support/world.js
 const { setWorldConstructor, Before, After, World } = require('@cucumber/cucumber');
 const { chromium, firefox } = require('playwright');
-const config = require('../config/playwright.config');
+const config = require('./playwright.config');
 
 class CustomWorld extends World {
   constructor(options) {

@@ -22,137 +22,126 @@ or
 The idea of this project is to execute all 7 scenarios below following the BDD Methodology
 
 
-Scenario 1 - Setting US address
+Scenario 1 - Setting US Country
 
-1-Open both browsers
+Feature: Set US Country on Amazon
+  As a user, I want to set my home country to the United States.
 
-2-Navigate to 'Amazon URL' saved on environments.js file
-
-3-Validade if a pop up with the title "Visiting from Canada?" appears
-
-4-If yes, click on the Stay button on Amazon.com
-
-5-If no, validate if the button Change address displays
-
-6-click on change address button
-
-7-click on or enter a US zip code search field
-
-8-Insert the postal code of 20212
-
-9-click on Apply button
-
-10-Validate if the button Continue displays
-
-11-click on Continue button
-
-12-click on the field Search on amazon on the center top of the page
+  Scenario: Setting US country
+    Given I open the Amazon homepage
+    When I click on Continue shopping
+    And I handle the "Visiting from Canada?" popup
+    And I set the delivery country to "United States"
+    Then I click on the main search bar to confirm
 
 ======----------------==============------------------
 
 
-Scenario 2 - Adding Ring Doorbell
+Scenario 2 - Setting US delivery Address
 
-13-Click on Search on amazon field
+Feature: Set US Address on Amazon
+  As a user, I want to set my delivery zip code to a US location.
 
-14-Inset the name Ring doorbell pro 2
-
-15-Click on Search button
-
-16-Validate if the field Video Doorbell Pro 2 result displays
-
-17-click on Video Doorbell Pro 2 result
-
-18-Validate if the button Add to Cart displays
-
-19-click on Add to Cart button
-
-20-Validate if a pop up Enhance your purchase displays
-
-21-If yes, click on No thanks button, If no proceed to the next step
-
-22-Validate if the text Added to cart displays
+  Scenario: Setting US zip code as delivery
+    Given I am on the Amazon homepage
+    When I click on Deliver to
+    And I set the US zip code to "20212" on Choose your location popup
+    Then I click on Done to confirm
 
 ======----------------==============------------------
 
 
-Scenario 3 - Adding Ring Chimes
+Scenario 3 - Adding 3 different products workflow
 
-23-Click on Search on amazon field
+Feature: Amazon Adding different products workflow
+  As a user, I want to add different products to my Amazon cart.
 
-24-Inset the name Ring chime Pro
+  Scenario: Adding Ring Doorbell Pro 2
+    Given I am at Amazon homepage
+    When I search for "Ring doorbell pro 2"
+    And I click on the "Video Doorbell Pro 2" result
+    And I click on Add to cart button
+    Then I validate "Added to cart" is displayed
 
-25-Click on Search button
+  Scenario: Adding Ring Chime Pro
+    Given I am at Amazon homepage
+    When I search for "Ring chime Pro"
+    And I click on the "Ring Chime Pro" result
+    And I select quantity "2"
+    And I add the item to the cart
+    Then I validate "Added to cart" is displayed
 
-26-Validate if the field Ring chime pro result displays
-
-27-click on Ring Chime Pro result
-
-28-Validate if the list box quantity displays
-
-29-click on quantity and selects the option 2
-
-30-Validate if the button Add to Cart displays
-
-31-click on Add to Cart button
-
-32-Validate if a pop up Enhance your purchase displays
-
-33-If yes, click on No thanks button, If no proceed to the next step 
-
-34-Validate if the text Added to cart displays
-
-======----------------==============------------------
-
-
-Scenario 4 - Checking both items in the Cart
-
-35-Validate if the button Go to Cart displays
-
-36-Click on Go to Cart button
-
-37-Validate if the text Shopping Cart displays
-
-38-Validate if the button Save for later displays
-
-39-Validate if the text Subtotal displays
+  Scenario: Adding Blink Doorbell and Blink Chime
+    Given I am at Amazon homepage
+    When I search for "Blink Video Doorbell + Mini 2 Motion & chime alerts"
+    And I click on the "Blink Video Doorbell + Mini 2 Motion & chime alerts" result
+    And I click on Add to cart button
+    Then I validate "Added to cart" is displayed
 
 ======----------------==============------------------
 
 
-Scenario 5 - Searching Ring subscriptions plans
+Scenario 4 - Checking all items in the Cart
 
-40-Navigate to 'Ring URL' saved on environments.js file
+Feature: Check Cart
+  As a user, I want to verify if all items are in my cart.
 
-41-Validate if the text Compare Plans displays
-
-42-Validate if the text Basic displays
-
-43-Get the value of the /yr price that it's listed for the Basic plan and Save it in a First variable named 'Ring basic yearly price'
+  Scenario: Checking all items are in the Cart
+    Given I have items in my cart
+    When I go to the cart
+    And I should see "Shopping Cart"
+    And I should see the "Ring Video Doorbell Pro 2" text
+    And I should see the "Ring Chime" text
+    And I should see the "Blink Video Doorbell + Mini 2 Motion & chime alerts" text
+    Then I should see the "Subtotal" text
 
 ======----------------==============------------------
 
 
-Scenario 6 - Searching Blink subscriptions plans
+Scenario 5 - Comparing the items price of all 3 products that were checked on Scenario4
 
-44-Navigate to 'Blink URL'
+Feature: Comparing the items price of all products that were checked on Scenario4
+  As a user, I want to compare the prices of products I have checked previously.
 
-45-Validate if the text Plan: Blink Basic displays
+  Scenario: Comparing products prices
+    Given I have saved the prices of all checked products from Scenario4
+    When I sum the prices of Ring Video Doorbell Pro 2 and Ring chime
+    And I compare against the price of Blink Video Doorbell and Mini 2 Motion & chime alerts
+    Then I print on console both total prices comparison results
+    And I highlight the cheaper total price option
 
-46-Validate if the text Yearly displays
+======----------------==============------------------
 
-47-Get the value of the /year price that it's listed for the Blink Basic plan and Save it in a Second variable named 'Blink basic yearly price'
+
+Scenario 6 - Searching for Ring and Blink subscription plans
+
+Feature: Searching for Ring and Blink subscription plans
+  As a user, I want to find both pages of Ring and Blink basic plans.
+
+  Scenario: Searching Ring subscriptions plans
+    When I navigate to "Ring URL"
+    And I find the "Compare Plans" text
+    And I find the "Basic" plan text
+    Then I get the "Ring basic yearly price" and save it
+
+  Scenario: Searching Blink subscriptions plans
+    When I navigate to "Blink URL"
+    And I find the "Plan: Blink Basic" text
+    And I find the "Yearly" text
+    Then I get the "Blink basic yearly price" and save it
 
 
 ======----------------==============------------------
 
 
-Scenario 7 - Comparing Ring vs Blink subscriptions from both pages
+Scenario 7 - Comparing Ring vs Blink subscriptions plans
 
-48-Create a method that print on the console what is the value that was saved inside the First variable from Scenario 5 and what is the value that was saved inside the Second variable from Scenario 6
+Feature: Compare Subscriptions
+  As a user, I want to compare the saved prices of Ring and Blink plans.
 
-49-Create a method that compares if the value saved inside the First variable from Scenario 5 is equal to the value saved inside the Second variable from Scenario 6
-
-50-IF both values are different, print the message on console "Subscription plans of Ring vs Blink are different"
-
-51-IF both values are the same, print the message on console "Subscription plans of Ring vs Blink are equal"
+  Scenario: Comparing Ring vs Blink subscriptions from both pages
+    Given I have saved the Ring and Blink yearly prices
+    When I compare the prices of Ring and Blink plans
+    And I print both prices on console
+    Then I print on console both plan prices comparison results
+    And I highlight the cheaper plan

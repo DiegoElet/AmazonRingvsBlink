@@ -9,7 +9,6 @@ class RingPlansPage {
     this.protectPlansTab = page.getByRole('tab', { name: 'Protect Plans' });
     this.comparePlansText = page.getByRole('heading', { name: 'Compare Protect Plans' });
     this.basicPlanText = page.getByRole('heading', { name: 'Basic' });
-    
     // Locator for the 'Basic' plan card and its yearly price
     this.basicPlanCard = page.locator('div.subscription-card').filter({ hasText: 'Basic' });
     this.basicYearlyPriceText = this.basicPlanCard.getByText('/year');

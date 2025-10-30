@@ -12,9 +12,8 @@ class BlinkPlansPage {
     // Locator for the yearly price associated with the basic plan
     // This selector is specific to this page's structure
     this.blinkBasicYearlyPriceText = page.locator('span.a-price')
-                                        .filter({ hasText: '/year' })
-                                        .filter({ has: page.locator('span.a-price-symbol', { hasText: '$' }) })
-                                        .first();
+    .filter({ hasText: '/year' })
+    .filter({ has: page.locator('span.a-price-symbol', { hasText: '$' }) }).first();
   }
 
   async navigate() {
