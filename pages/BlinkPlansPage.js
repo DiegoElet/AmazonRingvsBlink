@@ -28,7 +28,7 @@ class BlinkPlansPage {
     await expect(this.yearlyText).toBeVisible();
   }
 
-  async getBasicYearlyPrice() {
+  async getBlinkBasicYearlyPrice() {
     await expect(this.blinkBasicYearlyPriceText).toBeVisible();
     const priceText = await this.blinkBasicYearlyPriceText.innerText();
     // Extracts number from text like "$30.00\n/year" -> "30.00"

@@ -28,7 +28,7 @@ class RingPlansPage {
     await expect(this.basicPlanText).toBeVisible();
   }
 
-  async getBasicYearlyPrice() {
+  async getRingBasicYearlyPrice() {
     await expect(this.basicYearlyPriceText).toBeVisible();
     const priceText = await this.basicYearlyPriceText.innerText();
     // Extracts number from text like "$49.99/year" -> "49.99"

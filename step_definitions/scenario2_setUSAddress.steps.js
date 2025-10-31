@@ -3,11 +3,10 @@ const { When, Then, Given } = require('@cucumber/cucumber');
 const { AmHomePage } = require('../pages/AmHomePage');
 
 Given('I am on the Amazon homepage', async function () {
-  this.homePage = new AmHomePage(this.page);
-  await this.homePage.navigate();
+  await this.homePage.clickSearchBar();
 });
 
-When('I click on Deliver to address', async function () {
+When('I click on Deliver to', async function () {
   await this.homePage.clickDeliverToAddress();
 });
 

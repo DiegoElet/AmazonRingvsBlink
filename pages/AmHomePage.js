@@ -17,8 +17,8 @@ class AmHomePage {
     this.searchBar = page.locator('#twotabsearchtextbox');
   }
 
-  async navigate() {
-    await this.page.goto(amazonUrl);
+    async clickSearchBar() {
+    await this.searchBar.click();
   }
 
   async handleContinueShopping() {
@@ -36,10 +36,6 @@ class AmHomePage {
   async setCountryToUS() {
     await this.countryPopup.click();
     await this.page.getByRole('option', { name: 'United States' }).click();
-  }
-
-    async clickSearchBar() {
-    await this.searchBar.click();
   }
 
 

@@ -11,9 +11,10 @@ class AllProductsPage {
     this.noThanksButton = page.getByRole('button', { name: 'No Thanks' });
   }
 
-  async searchForItem(item) {
+  async searchForItems(item) {
     await this.searchBar.fill(item);
     await this.searchSubmitButton.click();
+    
   }
 
   async clickProduct(productName) {

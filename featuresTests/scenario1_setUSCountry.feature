@@ -1,5 +1,5 @@
 Feature: Set US Country on Amazon
-  As a user, I want to set my delivery country to the United States.
+  As a user, I want to set my home country to the United States.
 
   Scenario: Setting US country
     Given I open the Amazon homepage

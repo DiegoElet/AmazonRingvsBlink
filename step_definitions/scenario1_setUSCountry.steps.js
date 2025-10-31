@@ -12,7 +12,6 @@ When('I click on Continue shopping', async function () {
 });
 
 And('I handle the "Visiting from Canada?" popup', async function () {
-  this.homePage = new AmHomePage(this.page);
   await this.homePage.handleCanadaPopup();
 });
 
